@@ -1,6 +1,6 @@
-
+//Nguyen Xuan Tung -20215162
 import java.util.Scanner;
-
+//Example 6; solving equations
 public class EquationSolver {
     public static void main(String[] args) {
         System.out.println(
