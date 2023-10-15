@@ -14,7 +14,7 @@ public class ShowTwoNumbers {
                 "Nguyen Xuan Tung - 5162. Enter the second number",JOptionPane.INFORMATION_MESSAGE);
         strNotifications = strNum1 + " and " + strNum2;
 
-        JOptionPane.showMessageDialog(null,strNotifications,
+        JOptionPane.showMessageDialog(null,"Nguyen Xuan Tung - 5162. " + strNotifications,
                 "Show two Numbers",JOptionPane.INFORMATION_MESSAGE);
         System.exit(0);
     }
