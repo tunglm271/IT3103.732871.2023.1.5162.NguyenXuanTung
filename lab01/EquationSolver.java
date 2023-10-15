@@ -76,11 +76,12 @@ public class EquationSolver {
         int x1 = 0, x2 = 0;
 
         if(delta < 0) {
-            System.out.println("No solution");
+            System.out.println("No solution\n");
         } else if(delta == 0) {
-            System.out.println("x: " + (double) -b/(2*a));
+            System.out.println("x: " + (double) -b/(2*a) +"\n");
         } else {
-            System.out.println("x1: " + (double) ((-b + Math.sqrt(delta))/(2*a)) + " x2: " + (double) ((-b - Math.sqrt(delta))/(2*a)));
+            System.out.println("x1: " + (double) ((-b + Math.sqrt(delta))/(2*a)) + " x2: " +
+                    (double) ((-b - Math.sqrt(delta))/(2*a)));
         }
 
     }
