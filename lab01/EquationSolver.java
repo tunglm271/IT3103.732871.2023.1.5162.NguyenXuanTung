@@ -13,6 +13,7 @@ public class EquationSolver {
         int option = scanner.nextInt();
         switch (option) {
             case 1 -> {
+                System.out.println("format: ax + b = 0 ");
                 System.out.print("a: ");
                 int a = scanner.nextInt();
                 System.out.print("b: ");
@@ -32,11 +33,12 @@ public class EquationSolver {
 
     public static void linearEquation(int a, int b) {
         System.out.print("result: ");
-        System.out.println((a==0 && b == 0) ?"Infinite result":((a == 0) ?"no solution": (double) a/b));
+        System.out.println((a==0 && b == 0) ?"Infinite result":((a == 0) ?"no solution": (double) -a/b));
 
     }
 
     public static void SystemEquations() {
+        System.out.println("Format: \na11*x1+ a12*x2 = b1 \na21*x1 + a22*x2 = b2\n");
         Scanner scanner = new Scanner(System.in);
         System.out.print("a11: ");
         int a11 = scanner.nextInt();
@@ -62,6 +64,7 @@ public class EquationSolver {
     }
 
     public static void TwoDegreeEquation() {
+        System.out.println("Format: a*x^2 + b*x c = 0");
         Scanner scanner = new Scanner(System.in);
         System.out.print("a b c: ");
         int a = scanner.nextInt();
