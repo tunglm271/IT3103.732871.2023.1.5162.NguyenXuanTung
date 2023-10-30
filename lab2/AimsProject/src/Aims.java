@@ -1,3 +1,6 @@
+import java.util.Date;
+import java.util.Scanner;
+
 //Nguyen Xuan Tung - 20215162
 public class Aims {
     public static void main(String[] args) {
@@ -17,8 +20,7 @@ public class Aims {
         // test removing items function
 
         anOrder.removeDigitalVideoDisc(dvd2);
-        System.out.println("Total cost is" + '\n' + anOrder.totalCost());
-
-
+        System.out.printf("Total cost is %.2f",anOrder.totalCost());
     }
+
 }
