@@ -1,3 +1,5 @@
+package lab01.hust.soict.dsai.lab1.exercise;
+
 import javax.swing.JOptionPane;
 public class ChoosingOption {
     public static void main(String[] args) {

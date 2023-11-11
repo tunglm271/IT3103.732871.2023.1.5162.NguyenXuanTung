@@ -1,3 +1,5 @@
+package lab01.hust.soict.dsai.lab1.exercise;
+
 public class AddMatrix {
     public static void main(String[] args) {
         int[][] firstMatrix = {

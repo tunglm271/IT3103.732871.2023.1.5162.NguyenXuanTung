@@ -1,3 +1,5 @@
+package hust.soict.dsai.aims.disc;
+
 //Nguyen Xuan Tung - 20215162
 public class DigitalVideoDisc {
 
@@ -8,9 +10,14 @@ public class DigitalVideoDisc {
     private int length;
     private float cost;
 
+    private static int nbDigitalVideoDiscs = 0;
+
+    private int id;
     // Constructor by title
     public DigitalVideoDisc(String title) {
         this.title = title;
+        nbDigitalVideoDiscs++;
+        id = nbDigitalVideoDiscs;
     }
 
     // Constructor by category, title and cost
@@ -18,6 +25,8 @@ public class DigitalVideoDisc {
         this.title = title;
         this.category = category;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        id = nbDigitalVideoDiscs;
     }
 
     // Constructor by title, category , director, cost
@@ -26,6 +35,8 @@ public class DigitalVideoDisc {
         this.category = category;
         this.director = director;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        id = nbDigitalVideoDiscs;
     }
 
     // Constructor by all attributes
@@ -35,6 +46,8 @@ public class DigitalVideoDisc {
         this.director = director;
         this.length = length;
         this.cost = cost;
+        nbDigitalVideoDiscs++;
+        id = nbDigitalVideoDiscs;
     }
 
     //getter for title
@@ -62,4 +75,7 @@ public class DigitalVideoDisc {
         return length;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }

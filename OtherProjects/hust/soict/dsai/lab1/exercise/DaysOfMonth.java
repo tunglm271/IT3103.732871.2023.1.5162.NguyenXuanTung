@@ -1,3 +1,5 @@
+package lab01.hust.soict.dsai.lab1.exercise;
+
 import java.util.Scanner;
 
 public class DaysOfMonth {

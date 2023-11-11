@@ -1,3 +1,5 @@
+package lab01.hust.soict.dsai.lab1;
+
 //Example 1: Hello World.java
 //Text-printing program
 public class HelloWorld {

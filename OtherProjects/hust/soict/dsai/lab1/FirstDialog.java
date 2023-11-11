@@ -1,4 +1,4 @@
-//Example 2: FirstDialog.java
+package lab01.hust.soict.dsai.lab1;//Example 2: FirstDialog.java
 import javax.swing.*;
 
 public class FirstDialog {

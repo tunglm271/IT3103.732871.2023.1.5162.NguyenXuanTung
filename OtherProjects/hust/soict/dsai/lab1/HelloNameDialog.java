@@ -1,3 +1,4 @@
+package lab01.hust.soict.dsai.lab1;
 
 import javax.swing.*;
 

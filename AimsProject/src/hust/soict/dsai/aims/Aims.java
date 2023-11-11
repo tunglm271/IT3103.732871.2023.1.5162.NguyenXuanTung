@@ -1,7 +1,9 @@
+package hust.soict.dsai.aims;
+
 //Nguyen Xuan Tung - 20215162
 public class Aims {
     public static void main(String[] args) {
-        // Tao instance anOrder của class Cart
+        // Tao instance anOrder của class hust.soict.dsai.aims.cart.Cart
         Cart anOrder = new Cart();
         // Them dvd1, dvd2, dvd3 vao order
         DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King","Animation",
@@ -17,7 +19,7 @@ public class Aims {
         System.out.println("Total cost is" + '\n' + anOrder.totalCost());
 
 
-        // kiem tra method remove cua class Cart
+        // kiem tra method remove cua class hust.soict.dsai.aims.cart.Cart
         anOrder.removeDigitalVideoDisc(dvd2);
         System.out.printf("Total cost is %.2f",anOrder.totalCost());
     }
