@@ -1,7 +1,7 @@
 import java.util.Random;
 
 import static java.lang.System.currentTimeMillis;
-
+//Nguyen Xuan Tung - 20215162
 public class ConcatenationInLoops {
     public static void main(String[] args) {
         Random r = new Random(123);

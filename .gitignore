@@ -6,3 +6,4 @@ AimsProject/.out
 AimsProject/AimsProject.iml
 OtherProjects/.idea
 AimsProject/.gitignore
+*.iml
