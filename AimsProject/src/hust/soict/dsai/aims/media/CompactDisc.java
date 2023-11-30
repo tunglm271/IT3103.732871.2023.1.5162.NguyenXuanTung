@@ -15,6 +15,10 @@ public class CompactDisc extends Disc implements Playable {
         this.setLength(getLength());
     }
 
+    public CompactDisc(int id, String title, String category, float cost) {
+        super(id, title, category, cost);
+    }
+
     public String getArtist() {
         return artist;
     }

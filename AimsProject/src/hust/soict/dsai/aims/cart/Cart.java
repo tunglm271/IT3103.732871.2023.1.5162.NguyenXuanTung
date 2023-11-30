@@ -3,15 +3,12 @@ package hust.soict.dsai.aims.cart;
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.lang.module.ModuleDescriptor;
+import java.util.*;
 
 //Nguyen Xuan Tung - 20215162
 public class Cart {
 
-    // so luong toi da dvd co the co trong cart
-    public static final int MAX_NUMBERS_ORDERED = 20;
-    // Mảng lưu các dvd được thêm vao cart
 
     private ArrayList<Media> itemsOrdered = new ArrayList<Media>();
 
@@ -20,6 +17,7 @@ public class Cart {
             System.out.println(item.getTitle() + "is already in the cart !");
         } else {
             itemsOrdered.add(item);
+            System.out.println(item.getTitle() + " is now in your cart !");
         }
     }
 
@@ -28,7 +26,7 @@ public class Cart {
         if(itemsOrdered.contains(item)) {
             itemsOrdered.remove(item);
         } else {
-            System.out.println(item.getTitle() + "is not in the cart !");
+            System.out.println(item.getClass().getSimpleName() + ' ' + item.getTitle() + " is not in the cart !");
         }
     }
 
@@ -45,11 +43,15 @@ public class Cart {
 
     public void print() {
         StringBuilder output = new StringBuilder("*************CART************************** \nOrdered items: \n");
-        int i = 1;
-        for (Media item : itemsOrdered) {
-            output.append(i + ".[" + item.getTitle() + "] - [" + item.getCategory() + "] - "
-                    +item.getCost() + " $\n");
-            i++;
+        if(itemsOrdered.isEmpty()) {
+            output.append("No time\n");
+        } else {
+            int i = 1;
+            for (Media item : itemsOrdered) {
+                output.append(i + ".[" + item.getTitle() + "] - [" + item.getCategory() + "] - "
+                        + item.getCost() + " $\n");
+                i++;
+            }
         }
         output.append("total: ").append(totalCost()).append(" $\n");
         output.append("*******************************************\n");
@@ -79,8 +81,25 @@ public class Cart {
         System.out.println("No match found");
     }
 
+    public Media findMedia(String title) {
+        for (Media item : itemsOrdered) {
+            if (item.getTitle().equals(title)) {
+                return item;
+            }
+        }
+        return null;
+    }
 
+    public void emptyCart() {
+        itemsOrdered.removeAll(itemsOrdered);
+    }
 
+    public void sortByTitleCost() {
+        Collections.sort(itemsOrdered,Media.COMPARE_BY_TITLE_COST);
+    }
 
+    public void sortByCostTitle() {
+        Collections.sort(itemsOrdered,Media.COMPARE_BY_COST_TITLE);
+    }
 }
 

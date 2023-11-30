@@ -18,6 +18,20 @@ public class Store {
         return false;
     }
 
+    public Media findMedia(String title) {
+        for (Media item : itemsInStore) {
+            if (item.getTitle().equals(title)) {
+                return item;
+            }
+        }
+        return null;
+    }
+
+
+    public LinkedList<Media> getItemsInStore() {
+        return itemsInStore;
+    }
+
     public void removeMedia(Media disc) {
         if(checkMedia(disc)) {
             itemsInStore.remove(disc);
@@ -39,14 +53,14 @@ public class Store {
 
     @Override
     public String toString() {
-        StringBuilder string = new StringBuilder("**********STORE***************\nitems in the store: \n");
+        StringBuilder string = new StringBuilder("\n**********STORE***************\nitems in the store: \n");
         if(itemsInStore.isEmpty()) string.append("There is no dvd in the store !\n");
         else {
             for (Media item : itemsInStore) {
                 string.append(item.getTitle() + " - " + item.getCost() + " $\n");
             }
         }
-        string.append("*********************************");
+        string.append("*********************************\n");
         return string.toString();
     }
 }

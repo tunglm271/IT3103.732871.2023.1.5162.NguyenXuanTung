@@ -11,6 +11,9 @@ public class Book extends Media {
         this.authors = authors;
     }
 
+    public Book(int id, String title, String category, float cost) {
+        super(id, title, category, cost);
+    }
 
 
     public List<String> getAuthors() {
