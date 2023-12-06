@@ -303,10 +303,12 @@ public class Aims {
                             """);
                     int option2 = scanner.nextInt();
                     scanner.nextLine();
-                    if (option2 == 1) {
+                    if (option2 == 2) {
+                        System.out.println("Enter id:");
                         int id = scanner.nextInt();
                         cart.searchById(id);
                     } else {
+                        System.out.println("Enter title:");
                         String title = scanner.nextLine();
                         cart.searchByTitle(title);
                     }
@@ -338,6 +340,7 @@ public class Aims {
                         System.out.println("There is no such media !");
                     } else {
                         cart.removeMedia(item);
+                        System.out.println("Item is removed !");
                     }
                 }
 
@@ -361,7 +364,7 @@ public class Aims {
                     }
                 }
                 case  5 -> {
-                    System.out.println("Your cart have been paid\nThanks for using our service");
+                    System.out.println("Your order have been placed\nThanks for using our service");
                     cart.emptyCart();
                 }
             }

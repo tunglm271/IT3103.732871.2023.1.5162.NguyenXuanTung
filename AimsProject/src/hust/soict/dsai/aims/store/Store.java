@@ -4,7 +4,7 @@ import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
 
 import java.util.LinkedList;
-
+//Nguyen Xuan Tung - 20215162
 public class Store {
     private LinkedList<Media> itemsInStore = new LinkedList<Media>();
 
