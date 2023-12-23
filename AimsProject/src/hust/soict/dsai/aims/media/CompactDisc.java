@@ -49,7 +49,7 @@ public class CompactDisc extends Disc implements Playable {
     }
 
     public void play() {
-        System.out.println("\ntitle: " + getTitle() + '\n' + "artist: " + getArtist() + "\nSSS\n");
+        System.out.println("\ntitle: " + getTitle() + '\n' + "artist: " + getArtist() + "\n\n" + "TRacks:");
 
         for(Track song : tracks) {
             song.play();
@@ -74,5 +74,9 @@ public class CompactDisc extends Disc implements Playable {
             print.append('\n');
         }
         return print.toString();
+    }
+
+    public ArrayList<Track> getTracks() {
+        return tracks;
     }
 }

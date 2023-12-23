@@ -102,7 +102,8 @@ public class Cart {
         Collections.sort(itemsOrdered,Media.COMPARE_BY_COST_TITLE);
     }
 
-
-
+    public ArrayList<Media> getItemsOrdered() {
+            return itemsOrdered;
+    }
 }
 
