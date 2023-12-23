@@ -1,6 +1,7 @@
 package hust.soict.dsai.aims;
 
 import hust.soict.dsai.aims.cart.Cart;
+import hust.soict.dsai.aims.exception.PlayerException;
 import hust.soict.dsai.aims.media.*;
 import hust.soict.dsai.aims.store.Store;
 
@@ -9,7 +10,7 @@ import java.util.*;
 //Nguyen Xuan Tung - 20215162
 public class Aims {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws PlayerException {
         DigitalVideoDisc dvd = new DigitalVideoDisc(1,"Cinderella","Fantasy",
                 13.5f,"TUng ng",97);
         ArrayList<Track> tracks = new ArrayList<Track>();
@@ -29,7 +30,7 @@ public class Aims {
 
     }
 
-    public static void showMenu(Scanner scanner, Store store, Cart cart) {
+    public static void showMenu(Scanner scanner, Store store, Cart cart) throws PlayerException {
         while (true) {
             System.out.println(
                     """
@@ -168,7 +169,7 @@ public class Aims {
 
 
 
-    public static void mediaDetailsMenu(Scanner scanner, Store store, Cart cart) {
+    public static void mediaDetailsMenu(Scanner scanner, Store store, Cart cart) throws PlayerException {
         System.out.print("Enter media's title: ");
         String title = scanner.nextLine();
         Media item = store.findMedia(title);
@@ -212,7 +213,7 @@ public class Aims {
         }
     }
 
-    public static void storeMenu(Scanner scanner, Store store, Cart cart) {
+    public static void storeMenu(Scanner scanner, Store store, Cart cart) throws PlayerException {
 
         System.out.println(store);
         while (true) {
@@ -256,7 +257,11 @@ public class Aims {
                                 dvd.play();
                             }
                             if (item instanceof CompactDisc cd) {
-                                cd.play();
+                                try {
+                                    cd.play();
+                                } catch (PlayerException e) {
+                                    System.out.println("asd");
+                                }
                             }
                         }
                     }
@@ -268,7 +273,7 @@ public class Aims {
             }
         }
     }
-    public static void cartMenu(Scanner scanner,Cart cart) {
+    public static void cartMenu(Scanner scanner,Cart cart) throws PlayerException {
         while (true) {
             System.out.println("""
                     Options:
